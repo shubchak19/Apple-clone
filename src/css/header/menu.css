@@ -1,0 +1,54 @@
+.menu-btn {
+  height: 3.5em;
+  width: 3.5em;
+  cursor: pointer;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  position: relative;
+}
+
+.rect {
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  top: 48%;
+  left: 25%;
+  width: 50%;
+  height: 2%;
+  transition-property: top, transform;
+  transition-duration: 0.3s;
+  transition-delay: 0.15s, 0s;
+}
+
+.rect1 {
+  top: 38%;
+}
+
+.rect2 {
+  top: 60%;
+}
+
+.open-menu .rect {
+  transition-delay: 0s, 0.15s;
+  top: 48%;
+}
+
+.open-menu .rect1 {
+  transform: rotate(45deg);
+}
+
+.open-menu .rect2 {
+  transform: rotate(-45deg);
+}
+
+.open-menu .nav-box-container {
+  transition: opacity, transform;
+  transition-duration: 0.3s;
+}
+
+.open-menu .nav-hide {
+  transform: translateY(44px);
+  opacity: 0;
+  pointer-events: none;
+}

@@ -1,0 +1,18 @@
+@import url("./base/variable.css");
+@import url("./base/global.css");
+@import url("./base/animation.css");
+
+@import url("./header/header.css");
+@import url("./header/search.css");
+@import url("./header/recentSearch.css");
+@import url("./header/icons.css");
+@import url("./header/navigation.css");
+@import url("./header/menu.css");
+
+@import url("./main/productPage.css");
+@import url("./main/productCard.css");
+@import url("./main/carousel.css");
+@import url("./main/indicator.css");
+@import url("./main/promoCard.css");
+
+@import url("./footer/footer.css");

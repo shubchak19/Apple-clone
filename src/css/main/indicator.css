@@ -1,0 +1,76 @@
+#slider-indicator {
+    display: flex;
+    height: 4em;
+    height: 5em;
+    overflow: visible;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 3em;
+    position: relative;
+    /* display: none; */
+}
+
+.indicator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+.indicator-wrapper,
+.indicator-wrapper-clone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 1em 0.5em;
+    opacity: 0.2;
+    transition: opacity 0.3s ease;
+}
+
+.indicator-wrapper-clone {
+    display: none;
+}
+
+.indicator {
+    border-radius: 50%;
+    height: 0.8em;
+    width: 0.8em;
+    background-color: var(--dark);
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.indicator-wrapper:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.indicator-container .active {
+    opacity: 0.8;
+}
+
+.indicator-container .active:hover {
+    opacity: 0.8;
+    cursor: default;
+}
+
+.play-pause-btn {
+    background-image: url("../../assets/images/icons_png/other_icons/play.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    height: 3em;
+    width: 3em;
+    cursor: pointer;
+    position: absolute;
+    top: -1.2em;
+    left: 46.5%;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.play {
+    background-image: url("../../assets/images/icons_png/other_icons/pause.png");
+}

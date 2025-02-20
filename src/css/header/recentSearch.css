@@ -1,0 +1,137 @@
+.recent-container {
+  width: 100%;
+  height: 100%;
+  padding: 2em 4.7em;
+  box-sizing: border-box;
+  opacity: 0;
+}
+
+.open-menu .recent-container {
+  transform: translateY(-44px);
+  transition-property: transform, opacity;
+  transition-duration: 0.3s, 0.1s;
+}
+
+.open-menu .recent-show {
+  transition-duration: 0.3s;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.recent-heading-search-wrapper {
+  width: 100%;
+  max-width: var(--search-max-width);
+  height: fit-content;
+  border-bottom-left-radius: 3% 8%;
+  border-bottom-right-radius: 3% 8%;
+  overflow: hidden;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: white;
+  animation-duration: 0.2s;
+  opacity: 1;
+  background-color: inherit;
+  transition: opacity 0.3s ease;
+}
+
+.recent-heading {
+  font-size: 1.4rem;
+  color: var(--lighter-dark);
+  text-align: left;
+  padding: 0.3em 0;
+  margin-bottom: 1em;
+  font-weight: 400;
+  pointer-events: none;
+  opacity: 1;
+}
+
+.open-search .recent-heading {
+  animation-name: slide-in;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.recent-search-wrapper {
+  background-color: inherit;
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1em;
+}
+
+.recent-search {
+  padding-left: 0;
+  text-align: left;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 400;
+  cursor: pointer;
+  opacity: 1;
+  padding: 0.2em 0;
+}
+
+.open-search .recent-search {
+  animation-name: slide-in;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.recent-search:hover {
+  color: var(--light-anchor);
+}
+
+@media screen and (min-width: 1100px) {
+  .recent-container {
+    opacity: 0;
+    pointer-events: none;
+    background-color: white;
+    width: fit-content;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    padding: 2em 1em;
+    width: 100%;
+    transition: opacity 0.2s;
+  }
+
+  .recent-heading {
+    font-size: 1.2rem;
+    margin-left: 3em;
+    animation-duration: 0.2s;
+    opacity: 0;
+  }
+
+  .recent-search-wrapper {
+    gap: 0.5em;
+    margin: 1em 0;
+  }
+
+  .recent-search {
+    opacity: 0;
+    color: var(--dark);
+    font-size: 1.4rem;
+    padding: 0.5em 4em;
+    animation-duration: 0.2s;
+  }
+
+  .recent-search:hover {
+    background-color: rgb(230, 230, 230);
+    color: var(--light-anchor);
+  }
+
+  .search-container {
+    border: none;
+  }
+
+  .search-icon-wrapper .icon {
+    height: 100%;
+    opacity: 0.5;
+  }
+
+  .open-search .recent-container {
+    transition: opacity 0.5s ease 0.2s;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

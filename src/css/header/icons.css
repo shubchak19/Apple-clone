@@ -1,0 +1,39 @@
+.icon {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: auto;
+  height: 1em;
+  width: 2em;
+  cursor: pointer;
+}
+
+.nav-box-container .icon {
+  display: none;
+}
+
+.logo-icon {
+  background-image: url("../../assets/images/icons_svg/apple01.svg");
+}
+
+.search-icon {
+  background-image: url("../../assets/images/icons_svg/apple03.svg");
+}
+
+.cart-icon {
+  background-image: url("../../assets/images/icons_svg/apple02.svg");
+}
+
+.close-icon {
+  background-image: url("../../assets/images/icons_svg/close.svg");
+  display: none;
+}
+
+.search-icon-wrapper .icon {
+  height: 100%;
+  opacity: 0.5;
+}
+
+.search-submit-icon {
+  background-image: url("../../assets/images/icons_svg/apple03.svg");
+}

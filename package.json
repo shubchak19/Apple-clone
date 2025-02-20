@@ -1,0 +1,14 @@
+{
+  "name": "apple-clone",
+  "version": "1.0.0",
+  "description": "A fully responsive clone of Apple's homepage, built using **HTML, CSS, and JavaScript** to replicate Apple's sleek and modern design.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.7.3"
+  }
+}

@@ -1,0 +1,210 @@
+#product-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gutter);
+  --page-height: clamp(55em, 60vw, 78em);
+}
+
+.product-page {
+  position: relative;
+  width: 100%;
+  height: var(--page-height);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.hero {
+  height: 100dvh;
+}
+
+.hero .product-info {
+  animation-delay: 700ms;
+}
+
+.hero .cta-link-wrapper {
+  animation-delay: 1000ms;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.product-info-wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  box-sizing: border-box;
+  width: fit-content;
+  gap: 1.5em;
+}
+
+.product-name {
+  font-size: clamp(4.1rem, 6vw, 5rem);
+  font-weight: 500;
+  letter-spacing: -1px;
+  line-height: 1.3em;
+}
+
+.product-usp {
+  letter-spacing: -0.1rem;
+  font-size: clamp(1.9rem, 2.5vw, 2.5rem);
+  font-weight: 400;
+}
+
+.five-g {
+  border: 1px solid black;
+  border-radius: 12%/50%;
+  padding: 0.5em 1em;
+  font-size: clamp(1.3rem, 1.5vw, 1.5rem);
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.five-g.light {
+  border: 1px solid white;
+}
+
+/* Styling all the links */
+
+.cover-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.cover-link:hover {
+  cursor: pointer;
+}
+
+.cta-link-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: clamp(3.5em, 5vw, 5em);
+  width: fit-content;
+}
+
+.cta-link {
+  position: relative;
+  font-weight: 500;
+  font-size: 1.9rem;
+}
+
+.cta-link::after {
+  font-family: "Poppins", "Roboto", "sans serif";
+  content: ">";
+  position: absolute;
+  top: -0.2em;
+  color: inherit;
+  font-size: 1.2em;
+  padding-left: 0.2em;
+}
+
+/* Setting background images of product-pages */
+
+#iphone .cover-image {
+  background-image: url("../../assets/images/product_images/phone_images/iphone14.jpg");
+}
+
+#iphone-pro .cover-image {
+  background-image: url("../../assets/images/product_images/phone_images/iphone_14_pro.jpg");
+}
+
+#ipad .cover-image {
+  background-image: url("../../assets/images/product_images/phone_images/ipad.jpg");
+}
+
+/* Setting Product info positioning */
+
+.product-page .cover-image {
+  background-position: 50% 100%;
+}
+
+.product-page .product-info-wrapper {
+  bottom: 66%;
+}
+
+#iphone .product-info-wrapper {
+  bottom: 62%;
+}
+
+/* Setting page order */
+#iphone {
+  order: 1;
+}
+
+#iphone-pro {
+  order: 2;
+}
+
+#ipad {
+  order: 3;
+}
+
+/* Setting z-index for the product pages */
+
+.cover-image {
+  z-index: 0;
+}
+
+.product-info {
+  z-index: 1;
+}
+
+.cover-link {
+  z-index: 2;
+}
+
+.cta-link,
+.cta-button {
+  z-index: 3;
+}
+
+@media screen and (min-width: 780px) {
+  #iphone .cover-image {
+    background-image: url("../../assets/images/product_images/desktop_images/iphone.jpg");
+  }
+
+  #iphone-pro .cover-image {
+    background-image: url("../../assets/images/product_images/desktop_images/iphone_pro.jpg");
+  }
+
+  #ipad .cover-image {
+    background-image: url("../../assets/images/product_images/desktop_images/ipad.jpg");
+  }
+
+  .cover-image {
+    background-size: cover;
+  }
+
+  #iphone .product-info-wrapper {
+    bottom: 65%;
+  }
+
+  #iphone-pro .product-info-wrapper {
+    bottom: 65%;
+  }
+
+  #ipad .product-info-wrapper {
+    bottom: 40%;
+    left: 55%;
+  }
+
+  .terms-container {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}

@@ -1,0 +1,207 @@
+.extra {
+  cursor: pointer;
+}
+
+.promo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: var(--promo-width);
+  height: var(--promo-height);
+  overflow: hidden;
+  opacity: 0.4;
+  transition: opacity 0.6s ease;
+}
+
+.promo .cover-image {
+  background-position: 50% 0%;
+  background-size: cover;
+  position: relative;
+}
+
+.promo .desktop{
+  display: none;
+}
+
+@media screen and (min-width: 650px) {
+  .promo .desktop{
+    display: block;
+  }
+
+  .promo .phone {
+    display: none;
+  }
+}
+
+.promo .cover-image::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.9));
+}
+
+.promo-clone {
+  display: none;
+}
+
+.promo-container .active {
+  opacity: 1;
+}
+
+.active .promo-info {
+  bottom: 7%;
+  opacity: 1;
+}
+
+.promo-info {
+  transition-property: bottom, opacity;
+  transition-duration: 0.6s;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1em;
+  bottom: 0;
+  opacity: 0;
+  /* z-index: 9; */
+}
+
+.promo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  width: fit-content;
+  text-align: center;
+  gap: 0.2em;
+  padding: 0 2em;
+  box-sizing: border-box;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  z-index: 1;
+}
+
+.cta-button {
+  background-color: var(--light);
+  color: var(--dark);
+  font-size: clamp(1.2rem, 1.5vw, 1.4rem);
+  font-weight: 600;
+  padding: 1em 1.5em;
+  width: fit-content;
+  border-radius: 15%/50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.cta-button::after {
+  content: "";
+  background-color: #383838;
+  padding: 0 0.6em;
+  margin-left: 0.6em;
+
+  /* background-image: url("../../assets/images/play-button.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center */
+
+  /* Shorthand for Above properties (no specific order needed) */
+  background: url("../../assets/images/icons_png/other_icons/play-button.png")
+    no-repeat center/contain;
+}
+
+.promo-type {
+  font-size: clamp(1.8rem, 2vw, 2rem);
+  font-weight: 600;
+}
+
+.bullet-point {
+  display: none;
+}
+
+.movie-info {
+  position: absolute;
+  top: 5%;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 0 3em;
+}
+
+.tv-icon {
+  background-image: url("../../assets/images/icons_png/other_icons/apple_tv_icon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 2.5em;
+  width: 100%;
+}
+
+.movie-name {
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 4em;
+  width: 100%;
+  background-size: contain;
+}
+
+.cta-button:hover {
+  opacity: 0.9;
+}
+
+@media screen and (min-width: 650px) {
+  #carousel {
+    --promo-width: clamp(50em, 80vw, 120em);
+  }
+
+  .promo {
+    aspect-ratio: 1.8/1.05;
+    height: auto;
+  }
+
+  .movie-info {
+    display: none;
+  }
+
+  .promo-info {
+    flex-direction: row-reverse;
+    gap: clamp(2em, 3vw, 4em);
+    padding: 0 clamp(3em, 5vw, 10em);
+    justify-content: flex-end;
+  }
+
+  .promo-text {
+    display: block;
+    width: 50%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0;
+  }
+
+  .bullet-point {
+    display: inline;
+  }
+
+  .play-pause-btn {
+    top: 10%;
+    bottom: 0;
+    right: 2%;
+    left: auto;
+  }
+
+  #slider-indicator {
+    align-items: center;
+  }
+
+  .indicator-wrapper,
+  .indicator-wrapper-clone {
+    padding: 1em 0.8em;
+  }
+}

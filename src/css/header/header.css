@@ -1,0 +1,83 @@
+.header {
+  position: fixed;
+  --navbar-height: 5em;
+  width: 100%;
+  top: 0;
+  z-index: 9;
+  overflow: hidden;
+  transition-property: max-height, background-color, transform;
+  transition-duration: 0.5s;
+  backdrop-filter: blur(10px);
+  max-height: var(--navbar-height);
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 110vh;
+}
+
+.header-nav {
+  height: fit-content;
+  width: 100%;
+  overflow: hidden;
+  background-color: inherit;
+}
+
+.curtain {
+  content: "";
+  width: auto;
+  background-color: inherit;
+  height: 6em;
+  overflow: visible;
+  transition: height 0.5s ease;
+  position: relative;
+}
+
+.icon {
+  border: none;
+}
+
+.open-menu .nav-mobile-container .cart-icon {
+  transform: translateY(0.3em);
+  opacity: 0;
+}
+
+.open-menu {
+  max-height: 110vh;
+  backdrop-filter: none;
+  background-color: #000000;
+}
+@media screen and (min-width: 1100px) {
+  .header {
+    --navbar-height: 4.5em;
+    --navbar-max-width: 102em;
+    overflow: visible;
+    transition: max-height 0s;
+  }
+
+  .header-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+  }
+  .curtain {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    animation-duration: 0.2s;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+
+  .open-search {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
